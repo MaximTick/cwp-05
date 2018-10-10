@@ -18,6 +18,7 @@ server.listen(port, hostnmae, () => {
 });
 
 function parseBodyJson(req, cb) {
+    let body  = [];
     req.on('data', function(chunk) {
         body.push(chunk);
     }).on('end', function() {
