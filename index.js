@@ -1,7 +1,9 @@
 const http = require('http');
 const readAll = require("./handlers/readAll.js")
 const read = require("./handlers/read.js");
+const createArticle = require("./handlers/articles/createArticle.js");
 const deleteArticle = require("./handlers/articles/deleteArticle.js");
+const updateArticle = require("./handlers/articles/updateArticle.js");
 const hostnmae = '127.0.0.1';
 const port = 3000;
 
@@ -9,6 +11,8 @@ const handlers = {
     '/sum': sum,
     '/api/articles/readall': readAll.readAll,
     '/api/articles/read': read.read,
+    '/api/articles/create': createArticle.createArticle,
+    '/api/articles/update': updateArticle.updateArticle,
     '/api/articles/delete': deleteArticle.deleteArticle
 };
 
